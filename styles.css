@@ -67,16 +67,6 @@ img {
   height: 100%;
   object-fit: cover;
   object-position: center 10%;
-  mask-image: radial-gradient(
-    ellipse 90% 80% at 50% 40%,
-    black 50%,
-    transparent 100%
-  );
-  -webkit-mask-image: radial-gradient(
-    ellipse 90% 80% at 50% 40%,
-    black 50%,
-    transparent 100%
-  );
 }
 
 .hero-name {
@@ -255,7 +245,7 @@ img {
   display: block;
 }
 
-.hidden-video {
+.video-card.hidden-video {
   display: none;
 }
 
