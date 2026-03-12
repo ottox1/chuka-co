@@ -11,7 +11,7 @@
   --border: #e4e4e4;
   --text: #111111;
   --text-dim: #888888;
-  --accent: #c43e1e;
+  --accent: #dc2626;
   --font: 'Outfit', -apple-system, 'Helvetica Neue', Arial, sans-serif;
 }
 
@@ -248,6 +248,15 @@ img {
   grid-template-columns: 1fr 1fr;
   gap: 1px;
   background: var(--border);
+  position: relative;
+}
+
+.video-grid.expanded .hidden-video {
+  display: block;
+}
+
+.hidden-video {
+  display: none;
 }
 
 .video-card {
@@ -299,6 +308,46 @@ img {
   font-weight: 400;
   line-height: 1.4;
   letter-spacing: 0.01em;
+}
+
+/* ── Video Fade + See More ───────────────────────── */
+.video-fade {
+  height: 60px;
+  margin-top: -60px;
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(to bottom, transparent, var(--bg));
+  pointer-events: none;
+}
+
+.video-fade.hidden {
+  display: none;
+}
+
+.see-more {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  margin-top: 8px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  font-family: var(--font);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.see-more:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.see-more.hidden {
+  display: none;
 }
 
 /* ── Footer ──────────────────────────────────────── */
